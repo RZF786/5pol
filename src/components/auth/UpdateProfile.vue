@@ -57,7 +57,7 @@ export default {
                 this.profilePicture = user.photoURL
                 this.ready = false
             },
-            ctach: (error) => {
+            catch: (error) => {
                 console.log(error.message)
             }
         })

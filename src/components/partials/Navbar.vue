@@ -3,9 +3,9 @@
 		<md-toolbar>
 			<md-toolbar class="md-toolbar-container">
 				<md-button v-if="signed" class="md-icon-button" @click="toggleLeftSidenav">
-					<md-icon class="md-danger">menue</md-icon>
+					<md-icon class="md-danger">menu</md-icon>
 				</md-button>
-				<h2 class="md-title">Myfirebase</h2>
+				<h2 class="md-title">KWC Wealth Ltd</h2>
 			</md-toolbar>
 		</md-toolbar>
 		<md-sidenav v-if="signed" :md-swipe-distance="50" class="md-left md-fixed" ref="leftSidenav">

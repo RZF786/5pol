@@ -6,6 +6,7 @@ import UpdateProfile from '@/components/auth/UpdateProfile'
 import App from '@/components/App'
 import NotFound from '@/components/errors/404'
 import Firestore from '@/components/Firestore'
+import Investor from '@/components/Investor'
 
 import Vue from 'vue'
 
@@ -42,6 +43,14 @@ const routes = [{
             path: '/firestore',
             component: Firestore,
             name: 'Cloud Firestore',
+            meta: {
+                auth: true
+            }
+        },
+        {
+            path: '/investor',
+            component: Investor,
+            name: 'Investor',
             meta: {
                 auth: true
             }

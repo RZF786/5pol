@@ -9,13 +9,18 @@
                 <md-whiteframe class="data-container">
                     <md-list>
                         <md-subheader>Data Example</md-subheader>
-                        <md-list-item v-for="snapshot in Persons" :key="snapshot['.key']">
+                        <md-list-item v-for="snapshot in Investors" :key="snapshot['.key']">
                             <span>
                                 {{snapshot.name}}
                             </span>
-                            <md-button @click.native="remove(snapshot)" class="md-icon-button md-list-action">
-                                <md-icon class="md-accent">delete</md-icon>
-                            </md-button>
+                             <!-- <md-button class="md-icon-button md-list-action" @click.native="add()">
+                                <md-icon class="md-primary">send</md-icon>
+                            </md-button> -->
+                             <router-link tag="md-button" :to="{path: '/investor', params:{ investorID: 'Hello'} }" class="md-raised md-primary">Investor</router-link>
+                            <!-- <router-link @click.native="$refs.leftSidenav.toggle()" to="/investor">
+						        <span>Investor</span>
+					        </router-link> -->
+
                         </md-list-item>
                         <md-list-item>
                             <md-input-container>
@@ -47,7 +52,7 @@ export default {
     },
     firestore() {
         return {
-            Persons: this.$store.state.firestore.collection("Persons")
+            Investors: this.$store.state.firestore.collection("Investors")
         }
     },
     data() {
