@@ -48,9 +48,10 @@ const routes = [{
             }
         },
         {
-            path: '/investor',
+            path: '/investor/:id',
             component: Investor,
             name: 'Investor',
+            props: {default: true, sidebar: false},
             meta: {
                 auth: true
             }

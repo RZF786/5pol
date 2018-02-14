@@ -10,7 +10,8 @@
                 <md-list>
                     <md-subheader>Investor</md-subheader>
 
-                    {{investor}}
+                    {{investorID}}
+                    {{Investor}}
                 
                 </md-list>
             </md-whiteframe>
@@ -31,16 +32,18 @@ export default {
                 console.log("Auth Error")
             }
         })
-        console.log("Investor component is ready!!")
+        
     },
     firestore() {
-        return {
-            Investor: this.$store.state.firestore.collection("Investors")
-        }
+      console.log("InvestorID: ", this.investorID)
+
+      return {
+        Investor: this.$store.state.firestore.collection("Investors")
+      }
     },
     data() {
         return {
-            investor: this.$route.params
+            investorID: this.$route.params.id
             // models
         }
     },

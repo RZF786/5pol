@@ -12,11 +12,12 @@
                         <md-list-item v-for="snapshot in Investors" :key="snapshot['.key']">
                             <span>
                                 {{snapshot.name}}
+                                {{snapshot['.key']}}
                             </span>
                              <!-- <md-button class="md-icon-button md-list-action" @click.native="add()">
                                 <md-icon class="md-primary">send</md-icon>
                             </md-button> -->
-                             <router-link tag="md-button" :to="{path: '/investor', params:{ investorID: 'Hello'} }" class="md-raised md-primary">Investor</router-link>
+                             <router-link tag="md-button" :to="{name: 'Investor', params:{ id: snapshot['.key']}}" class="md-raised md-primary">Investor</router-link>
                             <!-- <router-link @click.native="$refs.leftSidenav.toggle()" to="/investor">
 						        <span>Investor</span>
 					        </router-link> -->
