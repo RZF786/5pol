@@ -30,7 +30,8 @@ export default new Vuex.Store({
         firestore: firestore,
         error: error,
         messaging: fcm,
-        firebase: firebase
+        firebase: firebase,
+        investors: []
     },
     // mutations
     mutations: {},
